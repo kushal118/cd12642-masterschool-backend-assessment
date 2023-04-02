@@ -4,4 +4,4 @@ export const photoRouter = express.Router();
 
  photoRouter.get("/",getPhotos)
  photoRouter.get("/:id",getPhotoById)
- photoRouter.get("/users/:username",getUserPhotos)
+ photoRouter.get("/phot/users/:username",getUserPhotos)

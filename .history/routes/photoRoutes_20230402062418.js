@@ -1,7 +1,7 @@
 import express from "express";
-import { getPhotoById, getPhotos, getUserPhotos } from "../controllers/photoController.js";
+import { getPhotoById, getPhotos } from "../controllers/photoController.js";
 export const photoRouter = express.Router();
 
  photoRouter.get("/",getPhotos)
  photoRouter.get("/:id",getPhotoById)
- photoRouter.get("/users/:username",getUserPhotos)
+ photoRouter.get("/photos/users/:username",get)

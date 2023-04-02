@@ -44,12 +44,10 @@ export const getUserPhotos= async(req,res)=>{
         username,
         description:description ?? "No description provided.",
         url:raw,
-      };
+      }
     })
-    res.status(200).json(data);
-
+    
   } catch (error) {
-    handleErrors(error,res)
     
   }
 }

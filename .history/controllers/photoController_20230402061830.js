@@ -39,17 +39,9 @@ export const getUserPhotos= async(req,res)=>{
         urls:{raw},
         description,
       }=object
-      return{
-        id,
-        username,
-        description:description ?? "No description provided.",
-        url:raw,
-      };
     })
-    res.status(200).json(data);
-
+    
   } catch (error) {
-    handleErrors(error,res)
     
   }
 }

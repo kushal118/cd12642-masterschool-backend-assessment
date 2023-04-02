@@ -46,10 +46,8 @@ export const getUserPhotos= async(req,res)=>{
         url:raw,
       };
     })
-    res.status(200).json(data);
-
+    
   } catch (error) {
-    handleErrors(error,res)
     
   }
 }

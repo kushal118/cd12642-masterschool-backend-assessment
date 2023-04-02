@@ -28,28 +28,12 @@ try {
 }
 }
 
-export const getUserPhotos= async(req,res)=>{
-  const {username}=req.params;
+export const getPhotoByUserName= async(req,res)=>{
+  const {userName}=req.params;
   try {
-    const response= await getData(`/users/${username}/photos`)
-    const data = response.data.map((object)=>{
-      const {
-        id,
-        user:{username},
-        urls:{raw},
-        description,
-      }=object
-      return{
-        id,
-        username,
-        description:description ?? "No description provided.",
-        url:raw,
-      };
-    })
-    res.status(200).json(data);
-
+    const response= await getData(`/photos/user/${user}`)
+    
   } catch (error) {
-    handleErrors(error,res)
     
   }
 }
